@@ -10,8 +10,8 @@ public class ConsoleInput {
         int n = scanner.nextInt();
         int b = a;
         for (int i = 0; i < n - 1; i++) {
-            b *= a;
+            a *= b;
         }
-        System.out.println("число " + a + " в степени " + n + " равно " + b);
+        System.out.println("число " + b + " в степени " + n + " равно " + a);
     }
 }
