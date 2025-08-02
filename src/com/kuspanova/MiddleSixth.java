@@ -20,8 +20,8 @@ public class MiddleSixth {
         int correctAnswers = 0;
 
         for (int i = 1; i <= 5; i++) {
-            int a = random.nextInt(10) + 1; // от 1 до 10
-            int b = random.nextInt(10) + 1;
+            int a = random.nextInt(9) + 1; // от 1 до 9
+            int b = random.nextInt(9) + 1;
             int c = a * b;
 
             System.out.print("Пример " + i + ": Сколько будет " + a + " * " + b + "? ");
