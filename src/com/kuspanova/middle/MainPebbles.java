@@ -19,49 +19,48 @@ public class MainPebbles {
      * После завершения игры компьютер выводит победителя и его результат.
      */
     public static void main(String[] args) {
-        Scanner scan =  new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         System.out.println("---------------------------------");
         System.out.println("---------------------------------");
         Random randomNumber = new Random();
         int flag = 1;
         System.out.println("Введите имя первого игрока: ");
         String nameFirst = scan.nextLine();
-        PlayerPebbles playerFirst = new PlayerPebbles(0,nameFirst);
+        PlayerPebbles playerFirst = new PlayerPebbles(0, nameFirst);
         System.out.println("Введите имя второго игрока:");
         String nameSecond = scan.nextLine();
-        PlayerPebbles playerSecond = new PlayerPebbles(0,nameSecond);
+        PlayerPebbles playerSecond = new PlayerPebbles(0, nameSecond);
         System.out.println("-----Компьютер загадал число!----");
-        int numberComputer = randomNumber.nextInt(1,101);
-        while(flag == 1){
+        int numberComputer = randomNumber.nextInt(1, 101);
+        while (flag == 1) {
             System.out.println("Выберите вариант:");
             System.out.println("1. Начать игру");
             System.out.println("2. Выход");
             System.out.print("Выбор: ");
             flag = scan.nextInt();
-            switch (flag){
+            switch (flag) {
                 case 1:
-                    int whoseMove = randomNumber.nextInt(1,3);
+                    int whoseMove = randomNumber.nextInt(1, 3);
                     int sum = 0;
                     int loser = 0;
-                    while(true){
-                        if(whoseMove == 1){
+                    while (true) {
+                        if (whoseMove == 1) {
                             System.out.println("--------Ходит первый участник игры--------");
                             System.out.println("Первый игрок [" + playerFirst.getName() + "] вводит число: ");
                             int numberFirst = scan.nextInt();
                             sum += numberFirst;
-                            if(sum > numberComputer){
+                            if (sum > numberComputer) {
                                 loser = 1;
                                 playerSecond.setCountVictories(playerSecond.getCountVictories() + 1);
                                 break;
                             }
                             whoseMove = 2;
-                        }
-                        else if (whoseMove == 2){
+                        } else if (whoseMove == 2) {
                             System.out.println("--------Ходит второй участник игры--------");
                             System.out.println("Второй игрок [" + playerSecond.getName() + "] вводит число: ");
                             int numberSecond = scan.nextInt();
                             sum += numberSecond;
-                            if(sum > numberComputer){
+                            if (sum > numberComputer) {
                                 loser = 2;
                                 playerFirst.setCountVictories(playerFirst.getCountVictories() + 1);
                                 break;
@@ -70,11 +69,10 @@ public class MainPebbles {
                         }
                     }
 
-                    if(loser == 1){
+                    if (loser == 1) {
                         System.out.println("Компьютер загадал число " + numberComputer);
                         System.out.println("Выиграл игрок №" + 2);
-                    }
-                    else{
+                    } else {
                         System.out.println("Компьютер загадал число " + numberComputer);
                         System.out.println("Выиграл игрок №" + 1);
                     }

@@ -25,14 +25,14 @@ public class Sticks {
         this.countSticks = countSticks;
     }
 
-    public boolean isVictory(){
+    public boolean isVictory() {
         if (countSticks == 1)
             return true;
         else
             return false;
     }
 
-    public int stepComputer(){
+    public int stepComputer() {
         int take = (countSticks - 1) % 4;
         if (take == 0) {
             take = 1; // если нет гарантированного выигрыша — берём 1

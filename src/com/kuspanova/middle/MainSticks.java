@@ -13,19 +13,18 @@ public class MainSticks {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         Sticks sticks = new Sticks(true, 20);
-        while (sticks.getCountSticks() > 1){
-            if(sticks.isRightPlayPerson()){
+        while (sticks.getCountSticks() > 1) {
+            if (sticks.isRightPlayPerson()) {
                 System.out.println("-------Ход пользователя-------");
                 System.out.println("Введите кол-во палочек, которые хотите убрать: ");
                 int countSticksPerson = scan.nextInt();
-                if(countSticksPerson != 1 && countSticksPerson != 2 && countSticksPerson != 3){
+                if (countSticksPerson != 1 && countSticksPerson != 2 && countSticksPerson != 3) {
                     System.out.println("Введенное число не корректно!!!! Попробуйте еще раз.");
                     continue;
                 }
                 sticks.setCountSticks(sticks.getCountSticks() - countSticksPerson);
                 System.out.println(sticks.drawSticks());
-            }
-            else{
+            } else {
                 System.out.println("-------Ход компьютера-------");
                 int countAfterComputerStep = sticks.getCountSticks() - sticks.stepComputer();
                 System.out.println("Кол-во палочек, которые хочет убрать компьютер: " + countAfterComputerStep);

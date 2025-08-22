@@ -8,21 +8,24 @@ public class Calculate {
         this.firstElem = firstElem;
         this.secondElem = secondElem;
     }
-    public double add(){
+
+    public double add() {
         return firstElem + secondElem;
     }
-    public double subtraction(){
+
+    public double subtraction() {
         return firstElem - secondElem;
     }
-    public double multiplication(){
+
+    public double multiplication() {
         return firstElem * secondElem;
     }
+
     public void division() {
         if (secondElem != 0) {
             double elem = firstElem / secondElem;
             System.out.println(elem);
-        }
-        else {
+        } else {
             System.out.println("Нельзя делить на ноль!!!");
         }
     }

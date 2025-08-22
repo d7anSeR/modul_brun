@@ -3,7 +3,7 @@ package com.kuspanova.middle;
 import java.util.Scanner;
 
 public class MainCalc {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Введите действие: ");
         String action = scan.nextLine();
@@ -13,7 +13,7 @@ public class MainCalc {
         double b = scan.nextInt();
         Calculate calculate = new Calculate(a, b);
         System.out.print("Результат: ");
-        switch (action){
+        switch (action) {
             case "+":
                 System.out.println(calculate.add());
                 break;
