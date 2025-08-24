@@ -1,27 +1,20 @@
 package com.kuspanova.middle;
 
 public class Calculate {
-    double firstElem;
-    double secondElem;
 
-    public Calculate(double firstElem, double secondElem) {
-        this.firstElem = firstElem;
-        this.secondElem = secondElem;
-    }
-
-    public double add() {
+    public double add(double firstElem, double secondElem) {
         return firstElem + secondElem;
     }
 
-    public double subtraction() {
+    public double subtraction(double firstElem, double secondElem) {
         return firstElem - secondElem;
     }
 
-    public double multiplication() {
+    public double multiplication(double firstElem, double secondElem) {
         return firstElem * secondElem;
     }
 
-    public void division() {
+    public void division(double firstElem, double secondElem) {
         if (secondElem != 0) {
             double elem = firstElem / secondElem;
             System.out.println(elem);

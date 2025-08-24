@@ -1,4 +1,4 @@
-package com.kuspanova.hard;
+package com.kuspanova.hard1;
 
 import java.util.Random;
 import java.util.Scanner;

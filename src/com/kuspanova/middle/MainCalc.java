@@ -11,20 +11,20 @@ public class MainCalc {
         double a = scan.nextInt();
         System.out.println("Введите второе число: ");
         double b = scan.nextInt();
-        Calculate calculate = new Calculate(a, b);
+        Calculate calculate = new Calculate();
         System.out.print("Результат: ");
         switch (action) {
             case "+":
-                System.out.println(calculate.add());
+                System.out.println(calculate.add(a, b));
                 break;
             case "-":
-                System.out.println(calculate.subtraction());
+                System.out.println(calculate.subtraction(a, b));
                 break;
             case "*":
-                System.out.println(calculate.multiplication());
+                System.out.println(calculate.multiplication(a, b));
                 break;
             case "/":
-                calculate.division();
+                calculate.division(a, b);
                 break;
             default:
                 System.out.println("нет такой операции");

@@ -1,4 +1,4 @@
-package com.kuspanova.hard;
+package com.kuspanova.hard2;
 
 import java.util.List;
 
